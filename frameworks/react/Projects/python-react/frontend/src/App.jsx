@@ -124,29 +124,25 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div>
       {/* Header */}
-      <header className="bg-blue-600 text-white py-6 shadow-md">
-        <div className="max-w-6xl mx-auto px-4">
-          <h1 className="text-3xl font-bold">📅 Agenda de Eventos</h1>
-          <p className="text-blue-100 mt-1">
-            Sistema de gerenciamento de eventos - Ensino Médio Técnico
-          </p>
-        </div>
+      <header>
+        <h1>📅 Agenda de Eventos</h1>
+        <p>Sistema de gerenciamento de eventos</p>
       </header>
 
       {/* Container Principal */}
-      <main className="max-w-6xl mx-auto px-4 py-8">
+      <main>
         {/* Mensagens de Sucesso */}
         {success && (
-          <div className="mb-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+          <div className="success-message">
             ✅ {success}
           </div>
         )}
 
         {/* Mensagens de Erro */}
         {error && (
-          <div className="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+          <div className="error-message">
             ❌ {error}
           </div>
         )}
@@ -161,11 +157,8 @@ function App() {
         />
 
         {editingEvent && (
-          <div className="mb-4 text-center">
-            <button
-              onClick={handleCancelEdit}
-              className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition"
-            >
+          <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+            <button onClick={handleCancelEdit}>
               Cancelar Edição
             </button>
           </div>
@@ -190,7 +183,7 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white text-center py-4 mt-12">
+      <footer>
         <p>© 2026 Sistema de Agenda de Eventos - Projeto Técnico</p>
       </footer>
     </div>

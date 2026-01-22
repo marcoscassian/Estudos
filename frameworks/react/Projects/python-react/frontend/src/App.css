@@ -1,12 +1,7 @@
-/* Estilos gerais da aplicação - a maior parte é gerenciada pelo Tailwind CSS */
+/* Estilos da aplicação */
 
 #root {
   width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body {
   margin: 0;
   padding: 0;
 }
